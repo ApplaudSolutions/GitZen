@@ -1,0 +1,5 @@
+{
+  "githubToken": "<github token>",
+  "zenhubToken": "<zenhub token>",
+  "org": "<org name>"
+}

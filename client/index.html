@@ -1,0 +1,94 @@
+<head>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/scripts.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="width: 50%; align: center">
+            <div class="col"></div>
+            <div class="col">
+                <form>
+                    <!--<div class="form-group">-->
+                        <!--<label for="exampleFormControlInput1">Email address</label>-->
+                        <!--<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <label for="repoSelect">Repositories</label>
+                        <select class="form-control" id="repoSelect">
+                            <option value="all">All</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="milestoneSelect">Milestones</label>
+                        <select class="form-control" id="milestoneSelect">
+                            <option value="all">All</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="labelSelect">Labels</label>
+                        <select class="form-control" id="labelSelect">
+                            <option value="all">All</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="assigneeSelect">Assignees</label>
+                        <select class="form-control" id="assigneeSelect">
+                            <option value="all">All</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="issueStateSelect">Issue state</label>
+                        <select class="form-control" id="issueStateSelect">
+                            <option value="all">All</option>
+                            <option value="open">Open</option>
+                            <option value="closed">Closed</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="pipelineSelect">Pipelines</label>
+                        <select class="form-control" id="pipelineSelect">
+                            <option value="all">All</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="authorSelect">Issue creator</label>
+                        <select class="form-control" id="authorSelect">
+                            <option value="all">All</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <button id="formSubmitButton" type="button" class="btn btn-success">Submit</button>
+
+                    <!--<div class="form-group">-->
+                        <!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
+                        <!--<select multiple class="form-control" id="exampleFormControlSelect2">-->
+                            <!--<option>1</option>-->
+                            <!--<option>2</option>-->
+                            <!--<option>3</option>-->
+                            <!--<option>4</option>-->
+                            <!--<option>5</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="exampleFormControlTextarea1">Example textarea</label>-->
+                        <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
+                    <!--</div>-->
+                </form>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+</body>
