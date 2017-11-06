@@ -82,8 +82,8 @@ app.get('/api/issues', (req, res, next) => {
       return [issue.number, issue.title, pipeline, milestone, estimate, assignee, labels, issue.state ].join(',');
     });
     const content = header + body.join('\n');
-    fs.writeFileSync(randomFileName, content);
-    res.download(path.join(__dirname, randomFileName));
+    fs.writeFileSync(path.join(__dirname, 'tmp', randomFileName), content);
+    res.download(path.join(__dirname, 'tmp', randomFileName));
   };
 
   const filterIssues = (issues) => {
