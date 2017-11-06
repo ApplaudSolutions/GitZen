@@ -79,7 +79,7 @@ app.get('/api/issues', (req, res, next) => {
       } else {
         pipeline = 'No Pipeline';
       }
-      return [issue.number, issue.title, pipeline, milestone, estimate, assignee, labels, issue.state ].join(',');
+      return [`"${issue.number}"`, `"${issue.title}"`, `"${pipeline}"`, `"${milestone}"`, `"${estimate}"`, `"${assignee}"`, `"${labels}"`, `"${issue.state}"` ].join(',');
     });
     const content = header + body.join('\n');
     fs.writeFileSync(path.join(__dirname, 'tmp', randomFileName), content);
