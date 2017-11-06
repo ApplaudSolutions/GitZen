@@ -19,129 +19,134 @@
     </nav>
 </div>
     <div class="container">
-        <div class="row col-sm-8">
-            <form class="form-horizontal">
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="org">Organization</label>
-                    <div class="col-sm-6">
-                        <input type="text" readonly class="form-control" id="org" value="ApplaudSolutions">
-                    </div>
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-footer"><h4>Github Zenhub data exporter</h4></div>
+            <div class="panel-body">
+                <div class="container row col-sm-8">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="org">Organization</label>
+                            <div class="col-sm-6">
+                                <input type="text" readonly class="form-control" id="org" value="ApplaudSolutions">
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="repoSelect">Repositories</label>
-                    <div class="col-sm-6">
-                        <select class="form-control" id="repoSelect">
-                            <option value="all">All</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-4">
-                        <label style="color:rgb(150, 149, 48);" class="control-label"></label>
-                    </div>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="repoSelect">Repositories</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" id="repoSelect">
+                                    <option value="all">All</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label style="color:rgb(150, 149, 48);" class="control-label"></label>
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="milestoneSelect">Milestones</label>
-                    <div class="col-sm-6">
-                        <select class="form-control" id="milestoneSelect">
-                            <option value="all">All</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-4">
-                        <label style="color:rgb(150, 149, 48);" class="control-label"></label>
-                    </div>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="milestoneSelect">Milestones</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" id="milestoneSelect">
+                                    <option value="all">All</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label style="color:rgb(150, 149, 48);" class="control-label"></label>
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="labelSelect">Labels</label>
-                    <div class="col-sm-6">
-                        <select class="form-control" id="labelSelect">
-                            <option value="all">All</option>
-                        </select>
-                        <span></span>
-                    </div>
-                    <div class="col-sm-4">
-                        <label style="color:rgb(150, 149, 48);" class="control-label"></label>
-                    </div>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="labelSelect">Labels</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" id="labelSelect">
+                                    <option value="all">All</option>
+                                </select>
+                                <span></span>
+                            </div>
+                            <div class="col-sm-4">
+                                <label style="color:rgb(150, 149, 48);" class="control-label"></label>
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="assigneeSelect">Assignees</label>
-                    <div class="col-sm-6">
-                        <select class="form-control" id="assigneeSelect">
-                            <option value="all">All</option>
-                        </select>
-                        <span></span>
-                    </div>
-                    <div class="col-sm-4">
-                        <label style="color:rgb(150, 149, 48);" class="control-label"></label>
-                    </div>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="assigneeSelect">Assignees</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" id="assigneeSelect">
+                                    <option value="all">All</option>
+                                </select>
+                                <span></span>
+                            </div>
+                            <div class="col-sm-4">
+                                <label style="color:rgb(150, 149, 48);" class="control-label"></label>
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="issueStateSelect">State</label>
-                    <div class="col-sm-6">
-                        <select class="form-control" id="issueStateSelect">
-                            <option value="all">All</option>
-                            <option value="open">Open</option>
-                            <option value="closed">Closed</option>
-                        </select>
-                        <span></span>
-                    </div>
-                    <div class="col-sm-4">
-                        <label style="color:rgb(150, 149, 48);" class="control-label"></label>
-                    </div>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="issueStateSelect">State</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" id="issueStateSelect">
+                                    <option value="all">All</option>
+                                    <option value="open">Open</option>
+                                    <option value="closed">Closed</option>
+                                </select>
+                                <span></span>
+                            </div>
+                            <div class="col-sm-4">
+                                <label style="color:rgb(150, 149, 48);" class="control-label"></label>
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="pipelineSelect">Pipelines</label>
-                    <div class="col-sm-6">
-                        <select class="form-control" id="pipelineSelect">
-                            <option value="all">All</option>
-                        </select>
-                        <span></span>
-                    </div>
-                    <div class="col-sm-4">
-                        <label style="color:rgb(150, 149, 48);" class="control-label"></label>
-                    </div>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pipelineSelect">Pipelines</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" id="pipelineSelect">
+                                    <option value="all">All</option>
+                                </select>
+                                <span></span>
+                            </div>
+                            <div class="col-sm-4">
+                                <label style="color:rgb(150, 149, 48);" class="control-label"></label>
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="authorSelect">Creator</label>
-                    <div class="col-sm-6">
-                        <select class="form-control" id="authorSelect">
-                            <option value="all">All</option>
-                        </select>
-                        <span></span>
-                    </div>
-                    <div class="col-sm-4">
-                        <label style="color:rgb(150, 149, 48);" class="control-label"></label>
-                    </div>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="authorSelect">Creator</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" id="authorSelect">
+                                    <option value="all">All</option>
+                                </select>
+                                <span></span>
+                            </div>
+                            <div class="col-sm-4">
+                                <label style="color:rgb(150, 149, 48);" class="control-label"></label>
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-2">
-                        <button id="formSubmitButton" type="button" class="btn btn-success">Submit</button>
-                    </div>
-                    <div class="col-sm-4">
-                        <label style="color:rgb(150, 149, 48);" class="control-label"></label>
-                    </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-2">
+                                <button id="formSubmitButton" type="button" class="btn btn-success">Download</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <label style="color:rgb(150, 149, 48);" class="control-label"></label>
+                            </div>
+                        </div>
+                        <!--<div class="form-group">-->
+                        <!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
+                        <!--<select multiple class="form-control" id="exampleFormControlSelect2">-->
+                        <!--<option>1</option>-->
+                        <!--<option>2</option>-->
+                        <!--<option>3</option>-->
+                        <!--<option>4</option>-->
+                        <!--<option>5</option>-->
+                        <!--</select>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="exampleFormControlTextarea1">Example textarea</label>-->
+                        <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
+                        <!--</div>-->
+                    </form>
                 </div>
-                <!--<div class="form-group">-->
-                <!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
-                <!--<select multiple class="form-control" id="exampleFormControlSelect2">-->
-                <!--<option>1</option>-->
-                <!--<option>2</option>-->
-                <!--<option>3</option>-->
-                <!--<option>4</option>-->
-                <!--<option>5</option>-->
-                <!--</select>-->
-                <!--</div>-->
-                <!--<div class="form-group">-->
-                <!--<label for="exampleFormControlTextarea1">Example textarea</label>-->
-                <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
-                <!--</div>-->
-            </form>
+            </div>
         </div>
     </div>
 </body>
