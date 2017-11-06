@@ -1,6 +1,7 @@
 $(document).ready(() => {
   // const baseUrl = 'http://localhost:'
-  $($('#repoSelect').next()).html('Fetching repos for organization...');
+  // $($('#repoSelect').closest('div').next('div').find('label')).html('Fetching repos for organization...');
+  $($('#repoSelect').closest('div').next('div').find('label')).html('Fetching repos for organization...');
   $.ajax('/api/repos').done((data) => {
     console.log(data);
     $.each(data, function(key, value) {
@@ -10,15 +11,15 @@ $(document).ready(() => {
         text: value.name
       }));
     });
-    $($('#repoSelect').next()).html('');
+    $($('#repoSelect').closest('div').next('div').find('label')).html('');
   });
 
   $('#repoSelect').on('change', function() {
     if(this.value === 'all'){
-      $($('#repoSelect').next()).html('Please select a valid repo..!');
+      $($('#repoSelect').closest('div').next('div').find('label')).html('Please select a valid repo..!');
       return;
     }else{
-      $($('#repoSelect').next()).html('');
+      $($('#repoSelect').closest('div').next('div').find('label')).html('');
     }
     //clear previous fields
     $('#milestoneSelect').empty();
@@ -32,11 +33,11 @@ $(document).ready(() => {
     $('#authorSelect').append('<option value="all">All</option>');
     $('#pipelineSelect').append('<option value="all">All</option>');
 
-    $($('#milestoneSelect').next()).html('Fetching milestones for ' + this.value + '...');
-    $($('#labelSelect').next()).html('Fetching labels for ' + this.value + '...');
-    $($('#assigneeSelect').next()).html('Fetching assignees for ' + this.value + '...');
-    $($('#authorSelect').next()).html('Fetching authors for ' + this.value + '...');
-    $($('#pipelineSelect').next()).html('Fetching pipelines for ' + this.value + '...');
+    $($('#milestoneSelect').closest('div').next('div').find('label')).html('Fetching milestones for ' + this.value + '...');
+    $($('#labelSelect').closest('div').next('div').find('label')).html('Fetching labels for ' + this.value + '...');
+    $($('#assigneeSelect').closest('div').next('div').find('label')).html('Fetching assignees for ' + this.value + '...');
+    $($('#authorSelect').closest('div').next('div').find('label')).html('Fetching authors for ' + this.value + '...');
+    $($('#pipelineSelect').closest('div').next('div').find('label')).html('Fetching pipelines for ' + this.value + '...');
 
     //fetch milestones
     $.ajax('/api/milestones?repo=' + this.value).done((data) => {
@@ -47,7 +48,7 @@ $(document).ready(() => {
           text: value.name
         }));
       });
-      $($('#milestoneSelect').next()).html('');
+      $($('#milestoneSelect').closest('div').next('div').find('label')).html('');
     });
 
     //fetch labels
@@ -59,7 +60,7 @@ $(document).ready(() => {
           text: value
         }));
       });
-      $($('#labelSelect').next()).html('');
+      $($('#labelSelect').closest('div').next('div').find('label')).html('');
     });
 
     //fetch assignees
@@ -74,8 +75,8 @@ $(document).ready(() => {
           value: value,
           text: value
         }));
-        $($('#assigneeSelect').next()).html('');
-        $($('#authorSelect').next()).html('');
+        $($('#assigneeSelect').closest('div').next('div').find('label')).html('');
+        $($('#authorSelect').closest('div').next('div').find('label')).html('');
       });
     });
 
@@ -88,16 +89,18 @@ $(document).ready(() => {
           text: value
         }));
       });
-      $($('#pipelineSelect').next()).html('');
+      $($('#pipelineSelect').closest('div').next('div').find('label')).html('');
     });
   });
 
   $('#formSubmitButton').on('click', function(){
     const repo = $('#repoSelect').val();
     if(repo === 'all'){
-      $($('#repoSelect').next()).html('Please select a valid repo..!');
+      $($('#repoSelect').closest('div').next('div').find('label')).html('Please select a valid repo..!');
       return;
     }
+    $($('#formSubmitButton').closest('div').next('div').find('label')).html('Download will start in few secs...');
+
     const repoId = $('#repoSelect').find(":selected").data('id');
     const milestone = $('#milestoneSelect').val();
     const label = $('#labelSelect').val();
@@ -125,6 +128,7 @@ $(document).ready(() => {
         link.href = window.URL.createObjectURL(blob);
         link.download = 'issues.csv';
         link.click();
+        $($('#formSubmitButton').closest('div').next('div').find('label')).html('');
       };
       req.send();
     }
