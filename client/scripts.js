@@ -1,6 +1,6 @@
 $(document).ready(() => {
   // const baseUrl = 'http://localhost:'
-  $($('#repoSelect').next()).html('Fetching repos for ApplaudSolutions...');
+  $($('#repoSelect').next()).html('Fetching repos for organization...');
   $.ajax('/api/repos').done((data) => {
     console.log(data);
     $.each(data, function(key, value) {
